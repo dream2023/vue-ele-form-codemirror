@@ -1,0 +1,53 @@
+{
+  "name": "vue-ele-form-codemirror",
+  "version": "0.1.0",
+  "description": "vue-ele-form 的 代码编辑器",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dream2023/vue-ele-form-codemirror"
+  },
+  "main": "lib/index.js",
+  "homepage": "https://github.com/dream2023/vue-ele-form-codemirror",
+  "keywords": [
+    "vue-ele-form",
+    "code-editor",
+    "codemirror",
+    "vue-codemirror",
+    "vue2",
+    "codemirror-editor",
+    "element-codemirror"
+  ],
+  "dependencies": {
+    "vue-codemirror": "^4.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.11.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^8.1.5",
+    "vue": "^2.6.10",
+    "vue-ele-form": "^0.3.6",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
