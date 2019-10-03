@@ -18,6 +18,8 @@ npm install vue-ele-form-codemirror --save
 
 ## 使用
 
+> 属性和引用资源参考: [vue-codemirror](https://github.com/surmon-china/vue-codemirror)
+
 ```js
 import EleForm from 'vue-ele-form'
 import EleFormCodemirror from 'vue-ele-form-codemirror'
@@ -34,6 +36,7 @@ Vue.component('codemirror', EleFormCodemirror)
 // 注册 vue-ele-form
 Vue.use(EleForm, {
   // 可以为编辑器配置全局属性, 每个实例都共享这个属性
+  // 属性请参考下面
   codemirror: {
     options: {
       theme: 'base16-dark',
@@ -64,6 +67,62 @@ formDesc: {
     }
   }
 }
+```
+
+## 示例
+
+```html
+<template>
+  <el-card
+    header="ele-form-codemirror 演示"
+    shadow="never"
+    style="max-width: 1250px;margin: 20px auto;"
+  >
+    <ele-form
+      :form-data="formData"
+      :form-desc="formDesc"
+      :request-fn="handleRequest"
+      :span="22"
+      @request-success="handleSuccess"
+    />
+  </el-card>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data () {
+    return {
+      formData: {
+        content: ''
+      },
+      formDesc: {
+        // 这里指定 type 为 'codemirror'
+        content: {
+          label: '代码',
+          type: 'codemirror'
+        }
+      }
+    }
+  },
+  methods: {
+    handleRequest (data) {
+      console.log(data)
+      return Promise.resolve()
+    },
+    handleSuccess () {
+      this.$message.success('提交成功')
+    }
+  },
+  mounted () {}
+}
+</script>
+
+<style>
+body {
+  background-color: #f0f2f5;
+}
+</style>
 ```
 
 ## 相关链接
