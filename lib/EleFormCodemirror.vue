@@ -5,15 +5,16 @@
       :style="desc.style"
       v-bind="attrs"
       v-model="newValue"
-      v-on="onEvents"
+      v-on="desc.on"
+      @blur="handleChange(newValue)"
     />
   </div>
 </template>
 
 <script>
-import { codemirror } from 'vue-codemirror'
-import 'codemirror/lib/codemirror.css'
-import formMixin from 'vue-ele-form/lib/mixins/formMixin'
+import { codemirror } from 'vue-codemirror';
+import 'codemirror/lib/codemirror.css';
+import { formMixin } from 'vue-ele-form';
 
 export default {
   name: 'codemirror',
@@ -30,9 +31,9 @@ export default {
           line: true
         }
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

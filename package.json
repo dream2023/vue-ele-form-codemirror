@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-form-codemirror",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "vue-ele-form 的 代码编辑器",
   "private": false,
   "license": "MIT",
@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.5",
     "vue": "^2.6.10",
-    "vue-ele-form": "^0.3.6",
+    "vue-ele-form": "^0.8.34",
     "vue-template-compiler": "^2.6.10"
   },
   "gitHooks": {
