@@ -14,7 +14,7 @@
 <script>
 import { codemirror } from 'vue-codemirror';
 import 'codemirror/lib/codemirror.css';
-import { formMixin } from 'vue-ele-form';
+import formMixin from 'vue-ele-form/lib/mixins/formMixin';
 
 export default {
   name: 'codemirror',
@@ -22,7 +22,7 @@ export default {
   components: {
     'vue-codemirror': codemirror
   },
-  data () {
+  data() {
     return {
       defaultAttrs: {
         options: {
